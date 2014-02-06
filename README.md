@@ -19,7 +19,7 @@ Here are them:
 
 ## LocalStorage
 
-The TokenModel.js file use the HTML5 window.localStorage o save the Token value to make the requests to foursquare api
+The token_model.js file use the HTML5 window.localStorage o save the Token value to make the requests to foursquare api
 
 ## How to Use the Lib
 
