@@ -23,5 +23,4 @@ InternetConnection = {
     refreshConnectionType : function() {
         InternetConnection.connectionType = navigator.connection.type;
     }
-
 };

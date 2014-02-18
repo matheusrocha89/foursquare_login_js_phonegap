@@ -2,7 +2,7 @@
  * Lib with the Function to use the Foursquare API
  * @type {{apiKey: string, authUrl: string, apiUrl: string, redirectUrl: string, authenticateWithRedirect: Function, getAccessTokenFromUrl: Function}}
  */
-FoursquareUtil = {
+var FoursquareUtil = {
     apiKey : '',
     authUrl : 'https://foursquare.com/',
     apiUrl : 'https://api.foursquare.com/',
@@ -15,17 +15,23 @@ FoursquareUtil = {
      * @param configObject [Object]
      */
     init : function(configObject) {
-        if (configObject.apiKey)
+
+        if ( configObject.apiKey ) {
             FoursquareUtil.apiKey = configObject.apiKey;
+        }
 
-        if (configObject.authUrl)
+        if (configObject.authUrl) {
             FoursquareUtil.authUrl = configObject.authUrl;
+        }
 
-        if (configObject.apiUrl)
+        if (configObject.apiUrl) {
             FoursquareUtil.apiUrl = configObject.apiUrl;
+        }
 
-        if (configObject.redirectUrl)
+        if (configObject.redirectUrl) {
             FoursquareUtil.redirectUrl = configObject.redirectUrl;
+        }
+
 
         FoursquareUtil.refreshVersionStr();
     },
@@ -34,10 +40,10 @@ FoursquareUtil = {
      * Refresh the version string of the Foursquare API to make the requests
      */
     refreshVersionStr : function() {
-        var todayDate = new Date();
-        var year    = todayDate.getFullYear();
-        var month   = todayDate.getMonth() + 1;
-        var day     = todayDate.getDate();
+        var todayDate = new Date(),
+            year    = todayDate.getFullYear(),
+            month   = todayDate.getMonth() + 1,
+            day     = todayDate.getDate();
 
         FoursquareUtil.versionStr = 'v='+year.toString() + month.toString() + day.toString();
     },
@@ -48,7 +54,7 @@ FoursquareUtil = {
      * @param event [Object]
      */
     checkTokenOnUrl : function(event) {
-        if (event.url.indexOf("access_token") != -1) {
+        if ( event.url.indexOf("access_token") != -1 ) {
             var token = FoursquareUtil.getAccessTokenFromUrl(event.url);
             TokenModel.init();
             TokenModel.saveToken(token);
