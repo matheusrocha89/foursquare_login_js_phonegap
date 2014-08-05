@@ -31,3 +31,5 @@ And in the you need to include the connection.util.js and foursquare.util.js tha
 After include all the file you just need to use the functions on the Foursquare object passing all the parameters.
 
 Later I will include a demo project and create a more detail documentation.
+
+just an small test
