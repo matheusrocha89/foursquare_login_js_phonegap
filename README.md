@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/matheusrocha89/foursquare_login_js_phonegap.png?label=ready&title=Ready)](https://waffle.io/matheusrocha89/foursquare_login_js_phonegap)
 # Foursquare Login with JS for Phonegap v0.2
 This is a small JS Lib optimized for phonegap developers that want to use the foursquare login in their phonegap projects.
 
