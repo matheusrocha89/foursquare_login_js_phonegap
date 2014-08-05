@@ -45,5 +45,6 @@ TokenModel = {
      */
     updateToken : function(token) {
         TokenModel.storage.setItem('token', token);
-    }
+    },
+    test: function() {}
 };
